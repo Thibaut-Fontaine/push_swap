@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/18 20:03:00 by tfontain          #+#    #+#             */
-/*   Updated: 2017/11/18 22:31:51 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/11/18 23:14:03 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,23 +89,29 @@ static int			solve(intmax_t *a, intmax_t *b, size_t na)
 		}
 		else if (ft_strequ(buffer, RA))
 		{
-			while ()
-				;
+			r(a, na);
 		}
 		else if (ft_strequ(buffer, RB))
 		{
+			r(b, nb);
 		}
 		else if (ft_strequ(buffer, RR))
 		{
+			r(a, na);
+			r(b, nb);
 		}
 		else if (ft_strequ(buffer, RRA))
 		{
+			rr(a, na);
 		}
 		else if (ft_strequ(buffer, RRB))
 		{
+			rr(b, nb);
 		}
 		else if (ft_strequ(buffer, RRR))
 		{
+			rr(a, na);
+			rr(b, nb);
 		}
 		else if (ft_strequ(buffer, "\n"))
 			return (1); // 1 si trie, 0 si non trie, -1 si b est pas vide ou erreur

@@ -1,31 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.h                                          :+:      :+:    :+:   */
+/*   rotate_funcs.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/18 20:12:06 by tfontain          #+#    #+#             */
-/*   Updated: 2017/11/18 23:13:22 by tfontain         ###   ########.fr       */
+/*   Created: 2017/11/18 22:35:05 by tfontain          #+#    #+#             */
+/*   Updated: 2017/11/18 23:14:46 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft/includes/libft.h"
-#include <unistd.h>
+#include "../includes/checker.h"
+
+void	r(intmax_t *a, intmax_t na)
+{
+	intmax_t i;
+	intmax_t tmp;
+
+	i = 1;
+	tmp = a[0];
+	while (i < na)
+	{
+		a[i - 1] = a[i];
+		++i;
+	}
+	a[na - 1] = tmp;
+}
+
+void	rr(intmax_t *b, intmax_t nb)
+{
+ // reverse rotate
+}
 
 
-#define SA "sa\n"
-#define SB "sb\n"
-#define SS "ss\n"
-#define PA "pa\n"
-#define PB "pb\n"
-#define RA "ra\n"
-#define RB "rb\n"
-#define RR "rr\n"
-#define RRA "rra\n"
-#define RRB "rrb\n"
-#define RRR "rrr\n"
 
-void	error(void);
-void	r(intmax_t *a, intmax_t na);
-void	rr(intmax_t *a, intmax_t na);
+
+
+
+
+
