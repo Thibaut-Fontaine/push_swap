@@ -40,7 +40,7 @@ all: odir
 	@$(MAKE) $(MFLAGS) $(NAME)
 
 $(NAME): $(OBJS)
-	@Make $(MFLAGS) -C $(LIBRARY_PATH)
+	@make $(MFLAGS) -C $(LIBRARY_PATH)
 	@echo " - Making $(NAME)"
 	@$(CC) $(CFLAGS) -o $(NAME) $^ $(LIBRARY)
 
@@ -52,12 +52,12 @@ odir:
 	@mkdir -p $(OBJS_PATH)
 
 clean:
-	@Make clean -C $(LIBRARY_PATH)
+	@make clean -C $(LIBRARY_PATH)
 	@echo " - Cleaning objs"
 	@rm -f $(OBJS)
 
 fclean: clean
-	@Make fclean -C $(LIBRARY_PATH)
+	@make fclean -C $(LIBRARY_PATH)
 	@echo " - Cleaning executable"
 	@rm -f $(NAME)
 

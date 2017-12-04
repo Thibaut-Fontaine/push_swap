@@ -12,7 +12,7 @@
 
 #include "../includes/checker.h"
 
-static void			error(void)
+void			error(void)
 {
 	ft_putstr("Error\n");
 	exit(-1);

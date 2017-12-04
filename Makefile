@@ -11,19 +11,19 @@
 # **************************************************************************** #
 
 all:
-	@Make -C checker
-	@Make -C push_swap
+	@make -C checker
+	@make -C push_swap
 	@echo " - Making"
 
 clean:
-	@Make clean -C checker
-	@Make clean -C push_swap
+	@make clean -C checker
+	@make clean -C push_swap
 	@echo " - Cleaning objs"
 	@rm -f $(OBJS)
 
 fclean: clean
-	@Make fclean -C checker
-	@Make fclean -C push_swap
+	@make fclean -C checker
+	@make fclean -C push_swap
 	@echo " - Cleaning"
 	@rm -f $(NAME)
 
